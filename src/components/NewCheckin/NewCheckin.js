@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   Platform,
   StyleSheet,
   Text,
   View,
   Button
-} from 'react-native';
+} from 'react-native'
 
 export default class NewCheckin extends Component {
   render() {
@@ -27,7 +27,7 @@ export default class NewCheckin extends Component {
           }
         />
       </View>
-    );
+    )
   }
 }
 
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-});
+})
