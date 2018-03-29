@@ -7,7 +7,7 @@ import {
   Button
 } from 'react-native'
 
-export default class NewCheckin extends Component {
+export default class NewCheckIn extends Component {
   render() {
     return (
       <View style={styles.container}>
