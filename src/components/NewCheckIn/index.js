@@ -4,14 +4,14 @@ import {
   View,
   Button
 } from 'react-native'
-import styles from './styles/styles'
+import styles from './styles'
 
-class PartnerList extends Component {
+class NewCheckIn extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to Partner List
+          Welcome to New Checkin
         </Text>
         <Button
           title="Log Out"
@@ -25,15 +25,9 @@ class PartnerList extends Component {
             this.props.navigation.navigate('DrawerOpen')
           }
         />
-        <Button
-          title="history"
-          onPress={() =>
-            this.props.navigation.navigate('PartnerHistory')
-          }
-        />
       </View>
     )
   }
 }
 
-export default PartnerList
+export default NewCheckIn

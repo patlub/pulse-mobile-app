@@ -4,7 +4,7 @@ import {
   View,
   Button
 } from 'react-native'
-import styles from './styles/styles'
+import styles from './styles'
 
 class Login extends Component {
   render() {
