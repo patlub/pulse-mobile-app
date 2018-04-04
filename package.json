@@ -9,7 +9,11 @@
   "dependencies": {
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.3",
-    "react-navigation": "^1.5.8"
+    "react-navigation": "^1.5.8",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-persist": "^5.9.1",
+    "redux-promise-middleware": "^5.0.0"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
@@ -20,7 +24,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "jest": "22.4.3",
-    "react-test-renderer": "^16.3.0-alpha.1"
+    "react-test-renderer": "^16.3.0-alpha.1",
+    "redux-logger": "^3.0.6"
   },
   "jest": {
     "preset": "react-native",
