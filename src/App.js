@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/es/integration/react';
+import { PersistGate } from 'redux-persist/es/integration/react'
 import configureStore from './store/configureStore'
-import ApplicationWithNavigation from './navigation';
+import RootNavigator from './navigation/rootNavigator'
 
 
-const { store, persistor } = configureStore();
+
+const { store, persistor } = configureStore()
 
 
 const App = () => (
   <Provider store={store}>
     <PersistGate persistor={persistor}>
-      <ApplicationWithNavigation />
+      <RootNavigator />
     </PersistGate>
   </Provider>
 )

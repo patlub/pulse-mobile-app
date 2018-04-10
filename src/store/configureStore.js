@@ -1,18 +1,10 @@
 import { createStore, applyMiddleware } from 'redux'
 import { persistStore } from 'redux-persist'
 import promiseMiddleware from 'redux-promise-middleware'
-import {
-  createReactNavigationReduxMiddleware
-} from 'react-navigation-redux-helpers'
 import reducers from '../reducers'
 
 
-const navigationMiddleware = createReactNavigationReduxMiddleware(
-  "root",
-  state => state.navigation,
-)
-
-const middlewares = [promiseMiddleware(), navigationMiddleware]
+const middlewares = [promiseMiddleware()]
 
 if (__DEV__) {
   const { logger } = require('redux-logger')

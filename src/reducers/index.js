@@ -1,6 +1,5 @@
 import { AsyncStorage } from 'react-native'
 import { persistCombineReducers } from 'redux-persist'
-import navigationReducer from '../navigation/reducer'
 import checkInReducer from '../components/CheckIn/reducer'
 import loginReducer from '../components/Login/reducer'
 import newCheckInReducer from '../components/NewCheckIn/reducer'
@@ -12,7 +11,6 @@ const config = { key: 'root', storage: AsyncStorage }
 
 
 const reducers = {
-  navigation: navigationReducer,
   login: loginReducer,
   checkIn: checkInReducer,
   newCheckInReducer: newCheckInReducer,
