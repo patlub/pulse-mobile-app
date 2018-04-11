@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Login Component renders as expected 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#2443DA",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 889.3333333333334,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 2.3,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/images/andela_logo.png",
+          }
+        }
+        style={
+          Object {
+            "height": 320,
+            "width": 320,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 0.8,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 27,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        PULSE
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 2,
+          "marginTop": 5,
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.6}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderRadius": 2,
+            "flexDirection": "row",
+            "height": 37,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "paddingHorizontal": 20,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/google_logo.png",
+              }
+            }
+            style={
+              Object {
+                "height": 23,
+                "width": 23,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "borderLeftColor": "grey",
+              "borderLeftWidth": 1,
+              "height": 37,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "grey",
+                "fontSize": 10,
+              }
+            }
+          >
+            SIGN IN TO GET STARTED
+          </Text>
+        </View>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
