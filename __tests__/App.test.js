@@ -1,11 +1,8 @@
 import 'react-native'
 import React from 'react'
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer'
 import App from '../src/App'
 
-describe('Testing App Component', () => {
-  it('renders as expected', () => {
-    const wrapper = shallow(<App />)
-    expect(wrapper).toMatchSnapshot();
-  });
+it('renders correctly', () => {
+  const tree = renderer.create(<App />)
 })
