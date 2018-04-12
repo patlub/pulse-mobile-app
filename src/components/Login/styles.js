@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     height: height / 1.5,
   },
   logoContainer: {
-    flex: 2.3,
+    flex: 2.7,
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',

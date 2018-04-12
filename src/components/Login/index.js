@@ -1,13 +1,16 @@
 import React from 'react'
 import { Text, View, Image, TouchableOpacity } from 'react-native'
+import PropTypes from 'prop-types'
 
 import styles from './styles'
+import andelaLogo from '../../assets/images/andela_logo.png';
+import googleLogo from '../../assets/images/google_logo.png'
 
-const Login = () => (
+const Login = ({ navigation }) => (
   <View style={styles.container}>
     <View style={styles.content}>
       <View style={styles.logoContainer}>
-        <Image source={require('../../assets/images/andela_logo.png')} style={styles.logoStyle} />
+        <Image source={andelaLogo} style={styles.logoStyle} />
       </View>
       <View style={styles.titleContainer}>
         <Text style={styles.titleStyle}>PULSE</Text>
@@ -17,11 +20,11 @@ const Login = () => (
           style={styles.touchableStyle}
           activeOpacity={0.6}
           onPress={() =>
-            this.props.navigation.navigate('PartnerList')
+            navigation.navigate('PartnerList')
           }
         >
           <View style={styles.touchableImageContainer} >
-            <Image source={require('../../assets/images/google_logo.png')} style={styles.touchableImage} />
+            <Image source={googleLogo} style={styles.touchableImage} />
           </View>
           <View style={styles.touchableDivider} />
           <View style={styles.touchableTextContainer}>
@@ -32,5 +35,11 @@ const Login = () => (
     </View>
   </View>
 )
+
+Login.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+}
 
 export default Login
