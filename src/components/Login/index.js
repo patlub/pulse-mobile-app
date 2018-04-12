@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text, View, Image, TouchableOpacity } from 'react-native'
-import PropTypes from 'prop-types'
 
 import styles from './styles'
 import andelaLogo from '../../assets/images/andela_logo.png';
@@ -35,11 +34,5 @@ const Login = ({ navigation }) => (
     </View>
   </View>
 )
-
-Login.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
-}
 
 export default Login
