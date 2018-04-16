@@ -2,7 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/andela/pulse-mobile-app/badge.svg?branch=ch-circle-ci-setup-156371632)](https://coveralls.io/github/andela/pulse-mobile-app?branch=ch-circle-ci-setup-156371632)
 
 ## Pulse Mobile
-
+Pulse Mobile is a mobile version of the Pulse app. This is used by managers to rate developers etc.
+View [pulse.andela.com](https://pulse.andela.com) for more.
 
 ## Installation
 
@@ -36,5 +37,5 @@ If you have everything installed correctly this command will open your app in th
 ### Testing
 To the run the tests simply run:
 ```
-Yarn test
+yarn test
 ```
