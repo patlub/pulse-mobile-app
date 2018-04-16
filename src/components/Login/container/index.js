@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import {
-  Text,
-  View,
-  Button,
   Linking,
   Platform
 } from 'react-native'
 import SafariView from 'react-native-safari-view'
 var qs = require('qs')
-import styles from '../styles'
+import { NavigationActions } from 'react-navigation'
+import Login from '../index'
 
-class Login extends Component {
+class LoginContainer extends Component {
 
   constructor(props) {
     super(props)
@@ -45,6 +43,7 @@ class Login extends Component {
     console.log(path, params)
     // do something here based on `path` and `params`
     this.setState({ token: params})
+    this.openPartnerScreen(this.props)
 
     if (Platform.OS === 'ios') {
       SafariView.dismiss()
@@ -52,6 +51,13 @@ class Login extends Component {
   }
 
   loginWithGoogle = () => this.openURL("https://api-staging.andela.com/login?redirect_url=pulsemobile://login")
+
+  openPartnerScreen = (props) => {
+    props.navigation.dispatch(NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({ routeName: 'Drawer' })],
+    }))
+  }
 
   // Open URL in a browser
   openURL = (url) => {
@@ -65,7 +71,7 @@ class Login extends Component {
         .catch(error => {
           // Fallback WebView code for iOS 8 and earlier
           console.log(error)
-        });
+        })
     }
     // Or Linking.openURL on Android
     else {
@@ -75,17 +81,9 @@ class Login extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Log In
-        </Text>
-        <Button
-          title="Log In"
-          onPress={this.loginWithGoogle}
-        />
-      </View>
+        <Login onPress={this.loginWithGoogle} />
     )
   }
 }
 
-export default Login
+export default LoginContainer

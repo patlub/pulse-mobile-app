@@ -5,7 +5,7 @@ import styles from './styles'
 import andelaLogo from '../../assets/images/andela_logo.png';
 import googleLogo from '../../assets/images/google_logo.png'
 
-const Login = ({ navigation }) => (
+const Login = ({ navigation, onPress }) => (
   <View style={styles.container}>
     <View style={styles.content}>
       <View style={styles.logoContainer}>
@@ -18,9 +18,7 @@ const Login = ({ navigation }) => (
         <TouchableOpacity
           style={styles.touchableStyle}
           activeOpacity={0.6}
-          onPress={() =>
-            navigation.navigate('PartnerList')
-          }
+          onPress={onPress}
         >
           <View style={styles.touchableImageContainer} >
             <Image source={googleLogo} style={styles.touchableImage} />
