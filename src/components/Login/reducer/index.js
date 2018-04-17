@@ -1,13 +1,13 @@
+import * as types from '../actions/types'
 
 const INITIAL_STATE = {
-
+  token: undefined,
 }
 
 export default (state = INITIAL_STATE, action) => {
-  // Login template reducer
   switch (action.type) {
-    case 'LOGIN':
-      return { ...state }
+    case types.LOGIN_SUCCESS:
+      return { ...state, token: action.payload }
     default:
       return state
   }

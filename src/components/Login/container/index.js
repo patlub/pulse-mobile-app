@@ -3,10 +3,13 @@ import {
   Linking,
   Platform
 } from 'react-native'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import SafariView from 'react-native-safari-view'
 var qs = require('qs')
 import { NavigationActions } from 'react-navigation'
 import Login from '../index'
+import * as loginActions from '../actions'
 
 class LoginContainer extends Component {
 
@@ -41,6 +44,8 @@ class LoginContainer extends Component {
     let params = url[1] ? qs.parse(url[1]) : null
 
     console.log(path, params)
+
+     this.props.loginActions.loginSuccess(params)
     // do something here based on `path` and `params`
     this.setState({ token: params})
     this.openPartnerScreen(this.props)
@@ -80,10 +85,20 @@ class LoginContainer extends Component {
   }
 
   render() {
+    const { token,loginActions } = this.props
     return (
         <Login onPress={this.loginWithGoogle} />
     )
   }
 }
 
-export default LoginContainer
+const mapStateToProps = state => {
+  const { token } = state
+  return { token }
+}
+
+const mapDispatchToProps = dispatch => ({
+  loginActions: bindActionCreators(loginActions,dispatch)
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(LoginContainer)

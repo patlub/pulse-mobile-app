@@ -13,7 +13,7 @@ const config = { key: 'root', storage: AsyncStorage }
 const reducers = {
   login: loginReducer,
   checkIn: checkInReducer,
-  newCheckInReducer: newCheckInReducer,
+  newCheckInReducer,
   partnerHistory: partnerHistoryReducer,
   partnerList: partnerListReducer,
 }
