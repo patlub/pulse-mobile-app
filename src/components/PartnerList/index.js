@@ -2,11 +2,18 @@ import React, { Component } from 'react'
 import {
   Text,
   View,
-  Button
+  Button,
+  AsyncStorage
 } from 'react-native'
 import styles from './styles'
 
 class PartnerList extends Component {
+
+
+  _signOutAsync = async () => {
+    await AsyncStorage.clear();
+    this.props.navigation.navigate('Login');
+  };
   render() {
     return (
       <View style={styles.container}>
@@ -15,9 +22,7 @@ class PartnerList extends Component {
         </Text>
         <Button
           title="Log Out"
-          onPress={() =>
-            this.props.navigation.navigate('Login')
-          }
+          onPress={this._signOutAsync}
         />
         <Button
           title="dRAWER"

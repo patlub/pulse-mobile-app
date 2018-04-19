@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import {
   Linking,
-  Platform
+  Platform,
+  AsyncStorage,
+  View
 } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import SafariView from 'react-native-safari-view'
-var qs = require('qs')
-import { NavigationActions } from 'react-navigation'
+import qs from 'qs'
 import Login from '../index'
 import * as loginActions from '../actions'
+import { getUserInfo, isValidToken } from './utils'
+import CustomToast  from '../../Common/CustomToast'
+import styles from '../styles'
+import { PROD_URL, STAGING_URL, REDIRECT_URL } from 'react-native-dotenv';
+
 
 class LoginContainer extends Component {
 
@@ -19,13 +25,12 @@ class LoginContainer extends Component {
   }
 
   state = {
-    token: undefined
+    token: undefined,
+    error: undefined
   }
 
   componentDidMount() {
-    // Add event listener to handle OAuthLogin:// URLs
     Linking.addEventListener('url', this._processURL)
-    // Launched from an external URL
     Linking.getInitialURL().then((url) => {
       if (url) {
         this._processURL({ url })
@@ -34,39 +39,54 @@ class LoginContainer extends Component {
   }
 
   componentWillUnmount() {
-    // Remove event listener
     Linking.removeEventListener('url', this._processURL)
   }
 
-  _processURL(e) {
+  _processURL = async(e) => {
     let url = e.url.replace('pulsemobile://', '').split('?')
     let path = url[0]
     let params = url[1] ? qs.parse(url[1]) : null
 
-    console.log(path, params)
+    // console.log(path, params)
 
-     this.props.loginActions.loginSuccess(params)
-    // do something here based on `path` and `params`
-    this.setState({ token: params})
-    this.openPartnerScreen(this.props)
+    let validUser = undefined
 
+    try {
+      validUser = await isValidToken(params.token)
+    } catch (e) {
+      await this.props.loginActions.loginFailure(e)
+      await this.setState({error: e.message })
+    }
+    if(validUser) {
+      let userInfo
+      try{
+        userInfo = await getUserInfo(params.token)
+      } catch(e) {
+        await this.props.loginActions.loginFailure(e)
+        await this.setState({error: e.message })
+      }
+      if(userInfo){
+        await this.props.loginActions.loginSuccess(userInfo)
+        await AsyncStorage.setItem('userToken', params.token)
+        await this.props.navigation.navigate('Drawer')
+      }
+
+    }
     if (Platform.OS === 'ios') {
-      SafariView.dismiss()
+      await SafariView.dismiss()
+    }
+    if(this.state.error){
+      this.refs['defaultToastBottom'].ShowToastFunction(this.state.error)
     }
   }
 
-  loginWithGoogle = () => this.openURL("https://api-staging.andela.com/login?redirect_url=pulsemobile://login")
-
-  openPartnerScreen = (props) => {
-    props.navigation.dispatch(NavigationActions.reset({
-      index: 0,
-      actions: [NavigationActions.navigate({ routeName: 'Drawer' })],
-    }))
+  loginWithGoogle = () => {
+    const BASE_URL = process.env.NODE_ENV === 'development' ? STAGING_URL : PROD_URL;
+    const uri = `${BASE_URL}/login?redirect_url=${encodeURIComponent(REDIRECT_URL)}`
+    this.openURL(uri)
   }
 
-  // Open URL in a browser
   openURL = (url) => {
-    // Use SafariView on iOS
     if (Platform.OS === 'ios') {
       SafariView.isAvailable()
         .then(SafariView.show({
@@ -75,10 +95,8 @@ class LoginContainer extends Component {
         }))
         .catch(error => {
           // Fallback WebView code for iOS 8 and earlier
-          console.log(error)
         })
     }
-    // Or Linking.openURL on Android
     else {
       Linking.openURL(url)
     }
@@ -86,8 +104,12 @@ class LoginContainer extends Component {
 
   render() {
     const { token,loginActions } = this.props
+
     return (
+      <View style={styles.mainContainer}>
         <Login onPress={this.loginWithGoogle} />
+        <CustomToast ref="defaultToastBottom" backgroundColor={'red'}  position = "bottom"/>
+      </View>
     )
   }
 }

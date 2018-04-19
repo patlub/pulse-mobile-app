@@ -1,11 +1,11 @@
 import * as types from './types'
 
-export const loginSuccess = ({ token }) => ({
+export const loginSuccess = userInfo => ({
   type: types.LOGIN_SUCCESS,
-  payload: token,
+  payload: userInfo,
 })
 
-export const loginFailure = ({ error }) => ({
+export const loginFailure = error => ({
   type: types.LOGIN_FAILURE,
   payload: error,
 })
