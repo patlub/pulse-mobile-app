@@ -39,3 +39,10 @@ To the run the tests simply run:
 ```
 yarn test
 ```
+
+
+### Inspecting
+Instruction on installing Reactotron can be found here
+
+[Install Reactotron](https://github.com/infinitered/reactotron/blob/master/docs/installing.md)
+
