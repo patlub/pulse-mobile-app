@@ -8,6 +8,7 @@
     "test-ci": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
+    "buffer": "^5.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
@@ -36,7 +37,9 @@
     "jest-serializer-enzyme": "^1.0.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.3.1",
+    "react-native-dotenv": "^0.1.1",
     "react-test-renderer": "^16.3.0-alpha.1",
+    "reactotron-react-native": "^1.14.0",
     "redux-logger": "^3.0.6"
   },
   "jest": {

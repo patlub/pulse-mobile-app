@@ -54,3 +54,5 @@ buck-out/
 
 # ignore local coverage
 coverage/
+
+.env
