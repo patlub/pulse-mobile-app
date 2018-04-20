@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, Image, TouchableOpacity } from 'react-native'
 import { Icon, Avatar } from 'react-native-elements'
-
+import PropTypes from 'prop-types'
 
 import styles from './styles'
 
@@ -116,5 +116,11 @@ class SideDrawer extends React.Component {
     )
   }
 }
+
+SideDrawer.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default SideDrawer
