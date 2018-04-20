@@ -53,7 +53,12 @@ class SideDrawer extends React.Component {
 
           {!this.state.showLogout ? (
             <View>
-              <TouchableOpacity style={styles.partnersNav}>
+              <TouchableOpacity
+                style={styles.partnersNav}
+                onPress={() =>
+                  this.props.navigation.navigate('PartnerList')
+                }
+              >
                 <Avatar
                   medium
                   icon={{
@@ -66,7 +71,12 @@ class SideDrawer extends React.Component {
                   Partners
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.newCheckinNav}>
+              <TouchableOpacity
+                style={styles.newCheckinNav}
+                onPress={() =>
+                  this.props.navigation.navigate('NewCheckIn')
+                }
+              >
                 <Avatar
                   medium
                   icon={{
@@ -82,7 +92,12 @@ class SideDrawer extends React.Component {
             </View>
           ) : (
             <View>
-              <TouchableOpacity style={styles.partnersNav}>
+              <TouchableOpacity
+                style={styles.partnersNav}
+                onPress={() =>
+                  this.props.navigation.navigate('Login')
+                }
+              >
                 <Avatar
                   medium
                   icon={{
