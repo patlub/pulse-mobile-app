@@ -1,13 +1,11 @@
 import React from 'react';
 import {
   ActivityIndicator,
-  AsyncStorage,
   StatusBar,
   View,
-  Text
 } from 'react-native';
 import { connect } from 'react-redux'
-import {isValidToken} from "./utils";
+import {isValidToken} from "../../../utils/authUtil";
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -44,4 +42,4 @@ const mapStateToProps = state => {
   const { userInfo } = state.login
   return { userInfo }
 }
-export default connect(mapStateToProps, {})(AuthLoadingScreen)
+export default connect(mapStateToProps)(AuthLoadingScreen)

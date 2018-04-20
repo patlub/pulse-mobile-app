@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {
   Linking,
   Platform,
-  AsyncStorage,
   View
 } from 'react-native'
 import { connect } from 'react-redux'
@@ -11,7 +10,7 @@ import SafariView from 'react-native-safari-view'
 import qs from 'qs'
 import Login from '../index'
 import * as loginActions from '../actions'
-import { getUserInfo, isValidToken } from './utils'
+import { getUserInfo, isValidToken } from '../../../utils/authUtil'
 import CustomToast  from '../../Common/CustomToast'
 import styles from '../styles'
 import { PROD_URL, STAGING_URL, REDIRECT_URL } from 'react-native-dotenv';
@@ -39,9 +38,8 @@ class LoginContainer extends Component {
 
   _processURL = async(e) => {
     let url = e.url.replace('pulsemobile://', '').split('?')
-    let path = url[0]
     let params = url[1] ? qs.parse(url[1]) : null
-    let validUser = undefined
+    let validUser
 
     try {
       validUser = await isValidToken(params.token)
@@ -92,8 +90,6 @@ class LoginContainer extends Component {
   }
 
   render() {
-    const { token,loginActions } = this.props
-
     return (
       <View style={styles.mainContainer}>
         <Login onPress={this.loginWithGoogle} />
