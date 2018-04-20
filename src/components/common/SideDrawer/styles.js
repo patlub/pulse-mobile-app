@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     marginStart: 20,
     alignSelf: 'center',
   },
-  partnersAvatar: {
+  partnersIcon: {
     backgroundColor: '#2443DA',
     height: 45,
     width: 45,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 10,
   },
-  newCheckinAvatar: {
+  newCheckinIcon: {
     backgroundColor: '#2443DA',
     height: 45,
     width: 45,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 10,
   },
-  logoutAvatar: {
+  logoutIcon: {
     backgroundColor: '#2443DA',
     height: 45,
     width: 45,

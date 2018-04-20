@@ -64,7 +64,7 @@ class SideDrawer extends React.Component {
                     name: 'people',
                     type: 'simple-line-icon',
                   }}
-                  overlayContainerStyle={styles.partnersAvatar}
+                  overlayContainerStyle={styles.partnersIcon}
                 />
                 <Text style={styles.partnersLabel}>
                   Partners
@@ -82,7 +82,7 @@ class SideDrawer extends React.Component {
                     name: 'plus',
                     type: 'feather',
                   }}
-                  overlayContainerStyle={styles.newCheckinAvatar}
+                  overlayContainerStyle={styles.newCheckinIcon}
                 />
                 <Text style={styles.newCheckinLabel}>
                   New Checkin
@@ -103,7 +103,7 @@ class SideDrawer extends React.Component {
                     name: 'logout-variant',
                     type: 'material-community',
                   }}
-                  overlayContainerStyle={styles.logoutAvatar}
+                  overlayContainerStyle={styles.logoutIcon}
                 />
                 <Text style={styles.logoutLabel}>
                   Log Out
