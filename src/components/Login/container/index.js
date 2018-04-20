@@ -37,19 +37,25 @@ class LoginContainer extends Component {
   _processURL = async(e) => {
     let url = e.url.replace('pulsemobile://', '').split('?')
     let params = url[1] ? qs.parse(url[1]) : null
-    let validUser
 
-    try {
-      validUser = await isValidToken(params.token)
-    } catch (e) {
-      await this.props.loginActions.loginFailure(e)
+    if(params.error){
+      await this.props.loginActions.loginFailure('Not Auhtorized!')
     }
+    let validUser
+    if(params.token){
+      try {
+        validUser = await isValidToken(params.token)
+      } catch (e) {
+        await this.props.loginActions.loginFailure(e.message)
+      }
+    }
+
     if(validUser) {
       let userInfo
       try{
         userInfo = await getUserInfo(params.token)
       } catch(e) {
-        await this.props.loginActions.loginFailure(e)
+        await this.props.loginActions.loginFailure(e.message)
       }
       if(userInfo){
         await this.props.loginActions.loginSuccess(userInfo)
@@ -60,8 +66,8 @@ class LoginContainer extends Component {
     if (Platform.OS === 'ios') {
       await SafariView.dismiss()
     }
-    if(this.state.error){
-      this.refs['defaultToastBottom'].ShowToastFunction(this.state.error)
+    if(this.props.error){
+      this.refs['defaultToastBottom'].ShowToastFunction(this.props.error)
     }
   }
 
@@ -101,8 +107,8 @@ class LoginContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  const { token } = state
-  return { token }
+  const { error } = state.login
+  return { error }
 }
 
 const mapDispatchToProps = dispatch => ({
