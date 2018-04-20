@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing SideDrawer Component renders as expected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#2443DA",
+        "flex": 0.3,
+        "flexDirection": "column",
+        "paddingTop": 30,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 0.9,
+            "flexDirection": "column",
+            "marginStart": 15,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "cache": "only-if-cached",
+              "uri": "https://raw.githubusercontent.com/sirjmkitavi/gui/master/static/profile.jpg",
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 45,
+              "height": 90,
+              "resizeMode": "cover",
+              "width": 90,
+            }
+          }
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 20,
+              "fontWeight": "bold",
+              "paddingTop": 30,
+            }
+          }
+        >
+          Test Admin
+        </Text>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "paddingBottom": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 15,
+            }
+          }
+        >
+          test-user-admin@andela.com
+        </Text>
+        <Icon
+          color="black"
+          iconStyle={
+            Array [
+              Object {
+                "color": "white",
+                "marginStart": 15,
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "180deg",
+                  },
+                ],
+              },
+            ]
+          }
+          name="arrow-drop-down"
+          raised={false}
+          reverse={false}
+          reverseColor="white"
+          size={24}
+          underlayColor="white"
+        />
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 0.7,
+        "marginStart": 20,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        style={
+          Object {
+            "flexDirection": "row",
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Avatar
+          editButton={
+            Object {
+              "iconColor": "#fff",
+              "iconName": "mode-edit",
+              "iconType": "material",
+              "size": null,
+              "style": null,
+              "underlayColor": "#000",
+            }
+          }
+          icon={
+            Object {
+              "name": "logout-variant",
+              "type": "material-community",
+            }
+          }
+          medium={true}
+          onEditPress={null}
+          overlayContainerStyle={
+            Object {
+              "backgroundColor": "#2443DA",
+              "borderColor": "#2443DA",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "height": 45,
+              "width": 45,
+            }
+          }
+          showEditButton={false}
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#4285f4",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "marginStart": 20,
+            }
+          }
+        >
+          Log Out
+        </Text>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
