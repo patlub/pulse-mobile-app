@@ -45,7 +45,7 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": ["<rootDir>/setupTests.js"],
+    "setupFiles": ["<rootDir>/setUpTests.js"],
     "setupTestFrameworkScriptFile": "./setUpTests.js",
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-navigation)/"
