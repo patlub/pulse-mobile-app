@@ -40,7 +40,6 @@ exports[`Testing SideDrawer Component renders as expected 1`] = `
         <Image
           source={
             Object {
-              "cache": "only-if-cached",
               "uri": "https://raw.githubusercontent.com/sirjmkitavi/gui/master/static/profile.jpg",
             }
           }
@@ -102,13 +101,7 @@ exports[`Testing SideDrawer Component renders as expected 1`] = `
                 "color": "white",
                 "marginStart": 15,
               },
-              Object {
-                "transform": Array [
-                  Object {
-                    "rotate": "180deg",
-                  },
-                ],
-              },
+              null,
             ]
           }
           name="arrow-drop-down"
@@ -133,6 +126,7 @@ exports[`Testing SideDrawer Component renders as expected 1`] = `
     <View>
       <TouchableOpacity
         activeOpacity={0.2}
+        onPress={[Function]}
         style={
           Object {
             "flexDirection": "row",
@@ -153,8 +147,8 @@ exports[`Testing SideDrawer Component renders as expected 1`] = `
           }
           icon={
             Object {
-              "name": "logout-variant",
-              "type": "material-community",
+              "name": "people",
+              "type": "simple-line-icon",
             }
           }
           medium={true}
@@ -185,7 +179,65 @@ exports[`Testing SideDrawer Component renders as expected 1`] = `
             }
           }
         >
-          Log Out
+          Partners
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "paddingVertical": 10,
+          }
+        }
+      >
+        <Avatar
+          editButton={
+            Object {
+              "iconColor": "#fff",
+              "iconName": "mode-edit",
+              "iconType": "material",
+              "size": null,
+              "style": null,
+              "underlayColor": "#000",
+            }
+          }
+          icon={
+            Object {
+              "name": "plus",
+              "type": "feather",
+            }
+          }
+          medium={true}
+          onEditPress={null}
+          overlayContainerStyle={
+            Object {
+              "backgroundColor": "#2443DA",
+              "borderColor": "#2443DA",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "height": 45,
+              "width": 45,
+            }
+          }
+          showEditButton={false}
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#4285f4",
+              "fontSize": 15,
+              "fontWeight": "bold",
+              "marginStart": 20,
+            }
+          }
+        >
+          New Checkin
         </Text>
       </TouchableOpacity>
     </View>

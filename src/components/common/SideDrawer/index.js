@@ -27,7 +27,6 @@ class SideDrawer extends React.Component {
                 style={styles.avatarStyle}
                 source={{
                   uri: 'https://raw.githubusercontent.com/sirjmkitavi/gui/master/static/profile.jpg',
-                  cache: 'only-if-cached',
               }}
               />
               <Text style={styles.titleStyle}>
