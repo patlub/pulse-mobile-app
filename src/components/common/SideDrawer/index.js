@@ -9,7 +9,7 @@ class SideDrawer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showLogout: true,
+      showLogout: false,
     }
   }
 
@@ -93,7 +93,7 @@ class SideDrawer extends React.Component {
           ) : (
             <View>
               <TouchableOpacity
-                style={styles.partnersNav}
+                style={styles.logoutNav}
                 onPress={() =>
                   this.props.navigation.navigate('Login')
                 }
@@ -104,17 +104,15 @@ class SideDrawer extends React.Component {
                     name: 'logout-variant',
                     type: 'material-community',
                   }}
-                  overlayContainerStyle={styles.partnersAvatar}
+                  overlayContainerStyle={styles.logoutAvatar}
                 />
-                <Text style={styles.partnersLabel}>
+                <Text style={styles.logoutLabel}>
                   Log Out
                 </Text>
               </TouchableOpacity>
             </View>
           )}
-
         </View>
-
       </View>
     )
   }

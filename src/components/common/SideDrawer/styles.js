@@ -93,6 +93,25 @@ const styles = StyleSheet.create({
     marginStart: 20,
     alignSelf: 'center',
   },
+  logoutNav: {
+    flexDirection: 'row',
+    paddingVertical: 10,
+  },
+  logoutAvatar: {
+    backgroundColor: '#2443DA',
+    height: 45,
+    width: 45,
+    borderWidth: 1,
+    borderColor: '#2443DA',
+    borderRadius: 5,
+  },
+  logoutLabel: {
+    color: '#4285f4',
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginStart: 20,
+    alignSelf: 'center',
+  },
 })
 
 export default styles
