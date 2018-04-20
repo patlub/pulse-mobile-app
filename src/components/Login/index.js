@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, Image, TouchableOpacity } from 'react-native'
 
 import styles from './styles'
-import andelaLogo from '../../assets/images/andela_logo.png';
+import andelaLogo from '../../assets/images/andela_logo.png'
 import googleLogo from '../../assets/images/google_logo.png'
 
 const Login = ({ navigation, onPress }) => (

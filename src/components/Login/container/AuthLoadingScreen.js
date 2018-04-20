@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react'
 import {
   ActivityIndicator,
   StatusBar,
   View,
-} from 'react-native';
+} from 'react-native'
 import { connect } from 'react-redux'
-import {isValidToken} from "../../../utils/authUtil";
+import {isValidToken} from "../../../utils/authUtil"
 
 class AuthLoadingScreen extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
   componentDidMount() {
-    this._bootstrapAsync();
+    this._bootstrapAsync()
   }
   _bootstrapAsync = () => {
     const { userInfo } = this.props
@@ -23,18 +23,18 @@ class AuthLoadingScreen extends React.Component {
         validAuth = isValidToken(userInfo.token)
       } catch (e) {
     }
-    this.props.navigation.navigate(validAuth ? 'Drawer' : 'Login');
+    this.props.navigation.navigate(validAuth ? 'Drawer' : 'Login')
   } else {
-    this.props.navigation.navigate('Login');
+    this.props.navigation.navigate('Login')
   }
-  };
+  }
   render() {
     return (
       <View>
         <ActivityIndicator />
         <StatusBar barStyle="default" />
       </View>
-    );
+    )
   }
 }
 

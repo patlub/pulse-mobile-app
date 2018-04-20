@@ -75,7 +75,7 @@ class LoginContainer extends Component {
     const PROD_URL = "https://api.andela.com"
     const STAGING_URL = "https://api-staging.andela.com"
     const REDIRECT_URL = "pulsemobile://login"
-    const BASE_URL = process.env.NODE_ENV === 'development' ? STAGING_URL : PROD_URL;
+    const BASE_URL = process.env.NODE_ENV === 'development' ? STAGING_URL : PROD_URL
     const uri = `${BASE_URL}/login?redirect_url=${encodeURIComponent(REDIRECT_URL)}`
     this.openURL(uri)
   }
