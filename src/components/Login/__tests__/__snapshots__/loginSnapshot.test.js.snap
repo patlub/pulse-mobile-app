@@ -76,7 +76,6 @@ exports[`Testing Login Component renders as expected 1`] = `
     >
       <TouchableOpacity
         activeOpacity={0.6}
-        onPress={[Function]}
         style={
           Object {
             "alignItems": "center",

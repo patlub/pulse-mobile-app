@@ -1,10 +1,9 @@
 
 import * as types from '../actions/types'
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   userInfo: undefined,
   error: undefined,
-  rehydrated: false,
 }
 
 export default (state = INITIAL_STATE, action) => {

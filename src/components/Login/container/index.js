@@ -24,11 +24,6 @@ class LoginContainer extends Component {
     this._processURL = this._processURL.bind(this)
   }
 
-  // state = {
-  //   token: undefined,
-  //   error: undefined
-  // }
-
   componentDidMount() {
     Linking.addEventListener('url', this._processURL)
     Linking.getInitialURL().then((url) => {
@@ -46,16 +41,12 @@ class LoginContainer extends Component {
     let url = e.url.replace('pulsemobile://', '').split('?')
     let path = url[0]
     let params = url[1] ? qs.parse(url[1]) : null
-
-    // console.log(path, params)
-
     let validUser = undefined
 
     try {
       validUser = await isValidToken(params.token)
     } catch (e) {
       await this.props.loginActions.loginFailure(e)
-      // await this.setState({error: e.message })
     }
     if(validUser) {
       let userInfo
@@ -63,11 +54,9 @@ class LoginContainer extends Component {
         userInfo = await getUserInfo(params.token)
       } catch(e) {
         await this.props.loginActions.loginFailure(e)
-        // await this.setState({error: e.message })
       }
       if(userInfo){
         await this.props.loginActions.loginSuccess(userInfo)
-        // await AsyncStorage.setItem('userToken', params.token)
         await this.props.navigation.navigate('Drawer')
       }
 
