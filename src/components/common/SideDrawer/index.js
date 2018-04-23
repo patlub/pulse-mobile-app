@@ -35,6 +35,7 @@ class SideDrawer extends React.Component {
             </View>
             <TouchableOpacity
               style={styles.mailContainer}
+              activeOpacity={0.6}
               onPress={() => this.toggleShowLogout(this.state.showLogout)}
             >
               <Text style={styles.mailText}>
@@ -54,6 +55,7 @@ class SideDrawer extends React.Component {
             <View>
               <TouchableOpacity
                 style={styles.partnersNav}
+                activeOpacity={0.6}
                 onPress={() =>
                   this.props.navigation.navigate('PartnerList')
                 }
@@ -72,6 +74,7 @@ class SideDrawer extends React.Component {
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.newCheckinNav}
+                activeOpacity={0.6}
                 onPress={() =>
                   this.props.navigation.navigate('NewCheckIn')
                 }
@@ -93,6 +96,7 @@ class SideDrawer extends React.Component {
             <View>
               <TouchableOpacity
                 style={styles.logoutNav}
+                activeOpacity={0.6}
                 onPress={() =>
                   this.props.navigation.navigate('Login')
                 }
@@ -121,6 +125,6 @@ SideDrawer.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func.isRequired,
   }).isRequired,
-};
+}
 
 export default SideDrawer
