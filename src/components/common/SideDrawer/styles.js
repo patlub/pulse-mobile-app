@@ -1,47 +1,55 @@
 import { StyleSheet, Platform } from 'react-native'
 
 const styles = StyleSheet.create({
-  drawer: {
+  safeArea: {
     flex: 1,
-    flexDirection: 'column',
   },
   header: {
-    flex: 0.30,
-    paddingTop: Platform.OS === 'ios' ? 30 : 10,
+    height: 150,
+    paddingTop: Platform.OS === 'ios' ? 15 : 10,
     backgroundColor: '#2443DA',
-    flexDirection: 'column',
   },
   headerContent: {
     flex: 1,
-    justifyContent: 'space-between',
-  },
-  profileStyle: {
-    flex: 0.9,
     flexDirection: 'column',
     marginStart: 15,
-    paddingTop: 10,
+  },
+  avatarContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   avatarStyle: {
-    height: 90,
-    width: 90,
-    borderRadius: 45,
+    height: 70,
+    width: 70,
+    borderRadius: 35,
     resizeMode: 'cover',
+  },
+  profileContainer: {
+    flexDirection: 'column',
+    marginTop: 20,
+  },
+  nameContainer: {
+    justifyContent: 'flex-end',
   },
   titleStyle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: 'white',
-    paddingTop: 30,
   },
   mailContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    paddingBottom: 5,
+    justifyContent: 'space-between',
+  },
+  mailTextContainer: {
+    alignItems: 'flex-start',
   },
   mailText: {
     color: 'white',
     fontSize: 15,
+  },
+  iconContainer: {
+    alignItems: 'flex-end',
   },
   iconStyle: {
     color: 'white',
@@ -51,7 +59,7 @@ const styles = StyleSheet.create({
     transform: [{ rotate: '180deg' }],
   },
   navContainer: {
-    flex: 0.70,
+    flex: 0.78,
     marginTop: 10,
     marginStart: 20,
   },
