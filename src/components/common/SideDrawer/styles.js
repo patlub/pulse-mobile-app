@@ -3,6 +3,7 @@ import { StyleSheet, Platform } from 'react-native'
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
+    backgroundColor: '#2443DA',
   },
   header: {
     height: 150,
@@ -58,8 +59,11 @@ const styles = StyleSheet.create({
   iconRotate: {
     transform: [{ rotate: '180deg' }],
   },
+  drawerNav: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
   navContainer: {
-    flex: 0.78,
     marginTop: 10,
     marginStart: 20,
   },

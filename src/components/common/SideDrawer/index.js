@@ -54,73 +54,74 @@ class SideDrawer extends React.Component {
             </View>
           </View>
         </View>
+        <View style={styles.drawerNav}>
+          <View style={styles.navContainer}>
 
-        <View style={styles.navContainer}>
-
-          {!this.state.showLogout ? (
-            <View>
-              <TouchableOpacity
-                style={styles.partnersNav}
-                activeOpacity={0.6}
-                onPress={() =>
-                  this.props.navigation.navigate('PartnerList')
-                }
-              >
-                <Avatar
-                  medium
-                  icon={{
-                    name: 'people',
-                    type: 'simple-line-icon',
-                  }}
-                  overlayContainerStyle={styles.partnersIcon}
-                />
-                <Text style={styles.partnersLabel}>
-                    Partners
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.newCheckinNav}
-                activeOpacity={0.6}
-                onPress={() =>
-                  this.props.navigation.navigate('NewCheckIn')
-                }
-              >
-                <Avatar
-                  medium
-                  icon={{
-                    name: 'plus',
-                    type: 'feather',
-                  }}
-                  overlayContainerStyle={styles.newCheckinIcon}
-                />
-                <Text style={styles.newCheckinLabel}>
-                    New Checkin
-                </Text>
-              </TouchableOpacity>
-            </View>
-            ) : (
+            {!this.state.showLogout ? (
               <View>
                 <TouchableOpacity
-                  style={styles.logoutNav}
+                  style={styles.partnersNav}
                   activeOpacity={0.6}
                   onPress={() =>
-                    this.props.navigation.navigate('Login')
+                    this.props.navigation.navigate('PartnerList')
                   }
                 >
                   <Avatar
                     medium
                     icon={{
-                      name: 'logout-variant',
-                      type: 'material-community',
+                      name: 'people',
+                      type: 'simple-line-icon',
                     }}
-                    overlayContainerStyle={styles.logoutIcon}
+                    overlayContainerStyle={styles.partnersIcon}
                   />
-                  <Text style={styles.logoutLabel}>
-                    Log Out
+                  <Text style={styles.partnersLabel}>
+                      Partners
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.newCheckinNav}
+                  activeOpacity={0.6}
+                  onPress={() =>
+                    this.props.navigation.navigate('NewCheckIn')
+                  }
+                >
+                  <Avatar
+                    medium
+                    icon={{
+                      name: 'plus',
+                      type: 'feather',
+                    }}
+                    overlayContainerStyle={styles.newCheckinIcon}
+                  />
+                  <Text style={styles.newCheckinLabel}>
+                      New Checkin
                   </Text>
                 </TouchableOpacity>
               </View>
-            )}
+        ) : (
+          <View>
+            <TouchableOpacity
+              style={styles.logoutNav}
+              activeOpacity={0.6}
+              onPress={() =>
+                this.props.navigation.navigate('Login')
+              }
+            >
+              <Avatar
+                medium
+                icon={{
+                  name: 'logout-variant',
+                  type: 'material-community',
+                }}
+                overlayContainerStyle={styles.logoutIcon}
+              />
+              <Text style={styles.logoutLabel}>
+                Log Out
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
+          </View>
         </View>
       </SafeAreaView>
     )
