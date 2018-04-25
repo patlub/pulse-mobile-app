@@ -37,6 +37,10 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		D7AD00C3AA7D490C82F51130 /* DINPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9CB0B5715474595A2118DF8 /* DINPro-Regular.ttf */; };
+		70257027FBDF426B912D187C /* DINPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53948751EAA14B48B21C7209 /* DINPro-Black.ttf */; };
+		CD94744583A04612813E78CA /* DINPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88DB773F21154BD2A34694EA /* DINPro-Bold.ttf */; };
+		5EA37C042E004D1CA78B8D44 /* DINPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1D69E899A0B44DE9ABE8C5C /* DINPro-Light.ttf */; };
+		58794CA1180340B3AE0609F2 /* DINPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF60B4E746744E6A18B490B /* DINPro-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +291,10 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		D9CB0B5715474595A2118DF8 /* DINPro-Regular.ttf */ = {isa = PBXFileReference; name = "DINPro-Regular.ttf"; path = "../src/assets/fonts/DIN/DINPro-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53948751EAA14B48B21C7209 /* DINPro-Black.ttf */ = {isa = PBXFileReference; name = "DINPro-Black.ttf"; path = "../src/assets/fonts/DIN/DINPro-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		88DB773F21154BD2A34694EA /* DINPro-Bold.ttf */ = {isa = PBXFileReference; name = "DINPro-Bold.ttf"; path = "../src/assets/fonts/DIN/DINPro-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E1D69E899A0B44DE9ABE8C5C /* DINPro-Light.ttf */ = {isa = PBXFileReference; name = "DINPro-Light.ttf"; path = "../src/assets/fonts/DIN/DINPro-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4CF60B4E746744E6A18B490B /* DINPro-Medium.ttf */ = {isa = PBXFileReference; name = "DINPro-Medium.ttf"; path = "../src/assets/fonts/DIN/DINPro-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -544,6 +552,10 @@
 			isa = "PBXGroup";
 			children = (
 				D9CB0B5715474595A2118DF8 /* DINPro-Regular.ttf */,
+				53948751EAA14B48B21C7209 /* DINPro-Black.ttf */,
+				88DB773F21154BD2A34694EA /* DINPro-Bold.ttf */,
+				E1D69E899A0B44DE9ABE8C5C /* DINPro-Light.ttf */,
+				4CF60B4E746744E6A18B490B /* DINPro-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -940,6 +952,10 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				D7AD00C3AA7D490C82F51130 /* DINPro-Regular.ttf in Resources */,
+				70257027FBDF426B912D187C /* DINPro-Black.ttf in Resources */,
+				CD94744583A04612813E78CA /* DINPro-Bold.ttf in Resources */,
+				5EA37C042E004D1CA78B8D44 /* DINPro-Light.ttf in Resources */,
+				58794CA1180340B3AE0609F2 /* DINPro-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

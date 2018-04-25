@@ -54,6 +54,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>DINPro-Regular.ttf</string>
+		<string>DINPro-Black.ttf</string>
+		<string>DINPro-Bold.ttf</string>
+		<string>DINPro-Light.ttf</string>
+		<string>DINPro-Medium.ttf</string>
 	</array>
 </dict>
 </plist>
