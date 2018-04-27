@@ -575,7 +575,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		791F3291C8C34F07A7F6DB5E /* Resources */ = {
+		47A27BB67F6A4B42969AACF4 /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
 				0900B1C574A64076AB231116 /* Entypo.ttf */,
@@ -589,14 +589,6 @@
 				80544EC36A68447E95F4E939 /* Octicons.ttf */,
 				53A6E6B3059E4C4B9C01ABDC /* SimpleLineIcons.ttf */,
 				55207FC401274373AEAC851F /* Zocial.ttf */,
-							);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
-		};
-		47A27BB67F6A4B42969AACF4 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
 				D9CB0B5715474595A2118DF8 /* DINPro-Regular.ttf */,
 				53948751EAA14B48B21C7209 /* DINPro-Black.ttf */,
 				88DB773F21154BD2A34694EA /* DINPro-Bold.ttf */,
