@@ -4,7 +4,7 @@ import {
   View,
   Button
 } from 'react-native'
-import styles from './styles'
+import styles from '../styles/styles'
 
 class PartnerHistory extends Component {
   render() {
