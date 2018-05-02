@@ -1,8 +1,8 @@
 import { StackNavigator } from 'react-navigation'
 
-import PartnerList from '../components/index'
-import PartnerHistory from '../components/index'
-import CheckIn from '../components/CheckIn'
+import PartnerList from '../components/PartnerList'
+import PartnerHistory from '../components/PartnerHistoryComponent'
+import CheckIn from '../components/CheckinComponent'
 
 export default partnerNavigator = StackNavigator({
   PartnerList: {

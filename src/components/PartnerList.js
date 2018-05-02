@@ -4,7 +4,7 @@ import {
   View,
   Button
 } from 'react-native'
-import styles from '../styles/styles'
+import styles from '../styles/PartnerListStyles'
 
 class PartnerList extends Component {
   render() {
