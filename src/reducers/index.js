@@ -1,10 +1,10 @@
 import { AsyncStorage } from 'react-native'
 import { persistCombineReducers } from 'redux-persist'
-import checkInReducer from './checkIn'
-import loginReducer from './login'
-import newCheckInReducer from './newCheckIn'
-import partnerHistoryReducer from './partnerHistory'
-import partnerListReducer from './partnerList'
+import checkInReducer from './CheckIn'
+import loginReducer from './Login'
+import newCheckInReducer from './NewCheckIn'
+import partnerHistoryReducer from './PartnerHistory'
+import partnerListReducer from './PartnerList'
 
 
 const config = { key: 'root', storage: AsyncStorage }
