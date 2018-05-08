@@ -4,25 +4,25 @@ import {
   View,
   Button
 } from 'react-native'
-import styles from '../styles/PartnerHistoryStyles'
+import styles from './styles'
 
-class PartnerHistory extends Component {
+class NewCheckIn extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to PartnerHistory
+          Welcome to New Checkin
         </Text>
         <Button
-          title="CheckIn"
+          title="Log Out"
           onPress={() =>
-            this.props.navigation.navigate('CheckIn')
+            this.props.navigation.navigate('Login')
           }
         />
         <Button
-          title="Back"
+          title="dRAWER"
           onPress={() =>
-            this.props.navigation.navigate('PartnerList')
+            this.props.navigation.navigate('DrawerOpen')
           }
         />
       </View>
@@ -30,4 +30,4 @@ class PartnerHistory extends Component {
   }
 }
 
-export default  PartnerHistory
+export default NewCheckIn

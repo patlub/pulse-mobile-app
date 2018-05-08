@@ -1,6 +1,6 @@
 import 'react-native'
 import React from 'react'
-import PartnerList from '../../src/components/PartnerList'
+import PartnerList from '../../src/components/PartnerList/index'
 
 import renderer from 'react-test-renderer'
 

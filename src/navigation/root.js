@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation'
 
-import Login from '../components/LoginComponent'
-import drawerNavigator from './drawerNavigator'
+import Login from '../components/Login/index'
+import drawerNavigator from './drawer'
 
 export default RootNavigator = StackNavigator({
   Login: {

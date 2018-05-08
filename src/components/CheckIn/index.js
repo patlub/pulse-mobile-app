@@ -4,7 +4,7 @@ import {
   View,
   Button
 } from 'react-native'
-import styles from '../styles/CheckinStyles'
+import styles from './styles'
 
 class CheckIn extends Component {
   render() {

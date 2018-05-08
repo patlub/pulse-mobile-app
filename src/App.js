@@ -2,7 +2,7 @@ import React  from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/es/integration/react'
 import configureStore from './store/configureStore'
-import RootNavigator from './navigation/rootNavigator'
+import RootNavigator from './navigation/root'
 
 
 

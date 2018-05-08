@@ -1,6 +1,6 @@
 import 'react-native'
 import React from 'react'
-import NewCheckIn from '../../src/components/NewCheckinComponent'
+import NewCheckIn from '../../src/components/NewCheckIn/index'
 
 import renderer from 'react-test-renderer'
 
