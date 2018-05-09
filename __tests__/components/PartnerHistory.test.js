@@ -1,6 +1,6 @@
 import 'react-native'
 import React from 'react'
-import PartnerHistory from '../../src/components/PartnerHistory/index'
+import PartnerHistory from '../../src/components/PartnerHistory'
 
 import renderer from 'react-test-renderer'
 

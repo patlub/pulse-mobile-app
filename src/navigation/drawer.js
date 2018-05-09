@@ -2,7 +2,7 @@ import { DrawerNavigator } from 'react-navigation'
 import { Dimensions } from 'react-native'
 
 import partnerNavigator from './partner'
-import NewCheckIn from '../components/NewCheckIn/index'
+import NewCheckIn from '../components/NewCheckIn'
 import SideDrawer from '../components/common/SideDrawer'
 
 let { height, width } = Dimensions.get('window')
